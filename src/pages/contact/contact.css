@@ -1,0 +1,54 @@
+@import '../../assets/css/site.css';
+
+.contact-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-heading-row h2 {
+  margin: 0;
+}
+
+.contact-heading-row .button {
+  flex-shrink: 0;
+}
+
+.linkedin-callout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.linkedin-arrow {
+  color: var(--primary);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.linkedin-button {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.linkedin-button:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .contact-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .linkedin-callout {
+    gap: 0.75rem;
+  }
+}

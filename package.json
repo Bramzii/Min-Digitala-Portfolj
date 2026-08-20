@@ -1,0 +1,16 @@
+{
+  "name": "digital-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "api": "json-server src/data/api.json --port=5001"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

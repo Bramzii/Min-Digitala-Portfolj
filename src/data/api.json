@@ -1,0 +1,128 @@
+{
+  "projects": [
+    {
+      "id": 5,
+      "title": "Min Digitala Portfölj",
+      "category": "Webbutveckling",
+      "year": "2026",
+      "displayOrder": 1,
+      "description": "En responsiv digital portfolio med åtta semantiska sidor, dynamisk projektvisning och ett kontaktformulär som kommunicerar med ett REST API.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "json-server"
+      ],
+      "featured": true,
+      "link": "https://github.com/Bramzii/Min-Digitala-Portfolj"
+    },
+    {
+      "id": 1,
+      "title": "Dagnys Bageri - lagerarkitektur",
+      "category": "C# / .NET",
+      "year": "2026",
+      "displayOrder": 2,
+      "description": "En vidareutveckling av Dagnys Bageri med en uppdelad lösningsarkitektur för API, core och infrastructure.",
+      "technologies": [
+        "C#",
+        ".NET",
+        "REST API",
+        "Lagerarkitektur"
+      ],
+      "featured": true,
+      "link": "https://github.com/Bramzii/DagnysBageri-Del2-INL-MNING"
+    },
+    {
+      "id": 2,
+      "title": "Dagnys Bageri - Web API",
+      "category": "C# / .NET",
+      "year": "2026",
+      "displayOrder": 4,
+      "description": "Ett C#-projekt med controllers, entiteter, datalager och en SQLite-databas för bageriets information.",
+      "technologies": [
+        "C#",
+        ".NET",
+        "Web API",
+        "SQLite"
+      ],
+      "featured": true,
+      "link": "https://github.com/Bramzii/DagnysBageri-main"
+    },
+    {
+      "id": 3,
+      "title": "Mormor Dagnys databas",
+      "category": "Databaser",
+      "year": "2025",
+      "displayOrder": 3,
+      "description": "Ett databasprojekt med SQL-skript för tabeller, testdata och frågor samt en färdig SQLite-databas.",
+      "technologies": [
+        "SQL",
+        "SQLite",
+        "Databasdesign",
+        "Testdata"
+      ],
+      "featured": true,
+      "link": "https://github.com/Bramzii/Mormor.Dagnys"
+    },
+    {
+      "id": 4,
+      "title": "West Coast Education",
+      "category": "C# / .NET",
+      "year": "2025",
+      "displayOrder": 5,
+      "description": "En skoluppgift byggd i C# som demonstrerar objektorienterad programmering och strukturerad applikationsutveckling.",
+      "technologies": [
+        "C#",
+        ".NET",
+        "OOP",
+        "Git"
+      ],
+      "featured": false,
+      "link": "https://github.com/Bramzii/WestCoastEducation"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "C# / .NET",
+      "category": "Systemutveckling"
+    },
+    {
+      "id": 2,
+      "name": "SQL",
+      "category": "Databaser"
+    },
+    {
+      "id": 3,
+      "name": "Git & GitHub",
+      "category": "Versionshantering"
+    },
+    {
+      "id": 4,
+      "name": "REST API",
+      "category": "Systemintegration"
+    },
+    {
+      "id": 5,
+      "name": "TDD",
+      "category": "Testning"
+    },
+    {
+      "id": 6,
+      "name": "Agilt arbete",
+      "category": "Arbetssätt"
+    },
+    {
+      "id": 7,
+      "name": "B2B & B2C",
+      "category": "Försäljning"
+    },
+    {
+      "id": 8,
+      "name": "Ledarskap",
+      "category": "Team och resultat"
+    }
+  ],
+  "messages": []
+}

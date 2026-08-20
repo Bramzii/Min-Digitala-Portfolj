@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projekt | Alex Portfolio</title>
+    <link rel="stylesheet" href="projects.css" />
+    <script type="module" src="projects.js"></script>
+  </head>
+  <body>
+    <header class="site-header"></header>
+    <main id="main">
+      <header class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Mitt arbete</p>
+          <h1>Projekt</h1>
+          <p class="lead">
+            Här finns ett urval av projekt där jag har tränat på utveckling,
+            design och problemlösning.
+          </p>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container">
+          <div class="filter-bar">
+            <label
+              >Sök projekt<input
+                type="search"
+                id="search"
+                placeholder="Sök på namn eller teknik" /></label
+            ><label
+              >Kategori<select id="category">
+                <option value="">Alla kategorier</option>
+              </select></label
+            >
+          </div>
+          <div class="grid" id="project-list"><p>Hämtar projekt …</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"></footer>
+  </body>
+</html>

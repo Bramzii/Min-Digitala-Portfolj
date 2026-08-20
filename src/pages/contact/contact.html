@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kontakt | Bedirhan Ramzi</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script type="module" src="contact.js"></script>
+  </head>
+  <body>
+    <header class="site-header"></header>
+    <main id="main">
+      <header class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Säg hej</p>
+          <h1>Kontakt</h1>
+          <p class="lead">
+            Vill du prata om systemutveckling, säkerhet, försäljning eller en
+            möjlighet? Hör gärna av dig.
+          </p>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container grid two">
+          <form class="form card" id="contact-form">
+            <div class="form-row">
+              <label
+                >Namn<input
+                  name="name"
+                  required
+                  minlength="2"
+                  autocomplete="name" /></label
+              ><label
+                >E-post<input
+                  type="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+              /></label>
+            </div>
+            <label>Ämne<input name="subject" required minlength="3" /></label
+            ><label
+              >Meddelande<textarea
+                name="message"
+                required
+                minlength="10"
+              ></textarea>
+            </label>
+            <div class="actions">
+              <button class="button" id="submit-message" type="submit">
+                Skicka meddelande</button
+              ><button
+                class="button secondary"
+                type="button"
+                id="edit-message"
+                hidden
+              >
+                Redigera senast skickade
+              </button>
+            </div>
+            <p class="status" id="form-status" aria-live="polite"></p>
+          </form>
+          <aside>
+            <div class="contact-heading-row">
+              <h2>Kontaktuppgifter</h2>
+              <div class="linkedin-callout">
+                <span class="linkedin-arrow" aria-hidden="true">→</span>
+                <a
+                  class="button linkedin-button"
+                  href="https://www.linkedin.com/in/beddi-ramzi-6b9540244/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Besök min LinkedIn</a
+                >
+              </div>
+            </div>
+            <p>
+              Använd formuläret för att lämna ett meddelande. Direkta
+              kontaktuppgifter visas inte offentligt på webbplatsen.
+            </p>
+            <div class="notice">
+              <strong>Så fungerar formuläret</strong>
+              <p>
+                Meddelandet sparas i json-server. Efteråt kan avsändaren hämta
+                och uppdatera sitt senast skickade meddelande. Därmed
+                demonstrerar sidan både att spara, hämta och uppdatera
+                information.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"></footer>
+  </body>
+</html>
