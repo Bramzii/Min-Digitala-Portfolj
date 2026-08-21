@@ -1,3 +1,5 @@
+import Animations from "./animations.js";
+
 const links = [
   ["/", "Start"],
   ["/pages/about/about.html", "Om mig"],
@@ -14,6 +16,7 @@ export default class Menu {
     this.#renderHeader();
     this.#renderFooter();
     this.#addEventListeners();
+    new Animations();
   }
 
   #renderHeader() {

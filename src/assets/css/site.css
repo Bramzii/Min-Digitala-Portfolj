@@ -110,11 +110,18 @@ button {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 650;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
 }
 .nav-list a:hover,
 .nav-list a[aria-current="page"] {
   color: #fff;
   background: var(--primary);
+}
+.nav-list a:hover {
+  transform: translateY(-1px);
 }
 
 main {
@@ -172,9 +179,16 @@ h2 {
   background: var(--primary);
   text-decoration: none;
   font-weight: 750;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 .button:hover {
   background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(7, 56, 41, 0.16);
 }
 .button.secondary {
   color: var(--primary);
@@ -232,6 +246,15 @@ h2 {
   border-radius: var(--radius);
   background: var(--surface);
   box-shadow: 0 8px 25px rgba(31, 45, 38, 0.04);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+.card:hover {
+  border-color: rgba(13, 79, 60, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(7, 56, 41, 0.1);
 }
 .card h3 {
   margin-top: 0.4rem;
@@ -257,8 +280,16 @@ h2 {
   font-weight: 700;
 }
 .text-link {
+  display: inline-flex;
   color: var(--primary);
   font-weight: 750;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+.text-link:hover {
+  color: var(--primary-dark);
+  transform: translateX(3px);
 }
 .stats {
   display: grid;
@@ -415,6 +446,19 @@ select:focus {
   color: #8a2925;
 }
 
+.reveal-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .site-footer {
   margin-top: 4rem;
   padding: 2rem 0;
@@ -472,5 +516,23 @@ select:focus {
   .admin-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .reveal-item {
+    opacity: 1;
+    transform: none;
   }
 }
