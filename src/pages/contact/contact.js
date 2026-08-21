@@ -1,16 +1,25 @@
 import DataClient from "../../utilities/data-client.js";
 import Menu from "../../utilities/menu.js";
+import { settings } from "../../config/settings.js";
 
 const form = document.querySelector("#contact-form");
 const editButton = document.querySelector("#edit-message");
 const submitButton = document.querySelector("#submit-message");
 const status = document.querySelector("#form-status");
+const formExplanation = document.querySelector("#form-explanation");
 const client = new DataClient("messages");
-let messageId = localStorage.getItem("portfolioMessageId");
+let messageId = settings.IS_LOCAL
+  ? localStorage.getItem("portfolioMessageId")
+  : null;
 
 const initApp = () => {
   new Menu();
-  editButton.hidden = !messageId;
+  editButton.hidden = !settings.IS_LOCAL || !messageId;
+
+  if (!settings.IS_LOCAL) {
+    formExplanation.textContent =
+      "Meddelandet skickas via webbplatsens säkra formulärtjänst. Du kan också kontakta mig direkt via e-post eller LinkedIn.";
+  }
 };
 
 const loadMessage = async () => {
@@ -33,11 +42,28 @@ const loadMessage = async () => {
 
 const handleSubmit = async (event) => {
   event.preventDefault();
-  const data = Object.fromEntries(new FormData(form));
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
+  delete data["form-name"];
+  delete data["bot-field"];
+
+  status.classList.remove("error");
   status.textContent = "Skickar …";
 
   try {
-    if (form.dataset.editing === "true" && messageId) {
+    if (!settings.IS_LOCAL) {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} - ${response.statusText}`);
+      }
+
+      status.textContent = "Tack! Ditt meddelande har skickats.";
+    } else if (form.dataset.editing === "true" && messageId) {
       await client.update(messageId, {
         ...data,
         updatedAt: new Date().toISOString(),
@@ -58,8 +84,9 @@ const handleSubmit = async (event) => {
     delete form.dataset.editing;
     submitButton.textContent = "Skicka meddelande";
   } catch (error) {
-    status.textContent =
-      "Meddelandet kunde inte sparas. Kontrollera att databasen är startad.";
+    status.textContent = settings.IS_LOCAL
+      ? "Meddelandet kunde inte sparas. Kontrollera att databasen är startad."
+      : "Meddelandet kunde inte skickas. Mejla mig gärna direkt i stället.";
     status.classList.add("error");
   }
 };

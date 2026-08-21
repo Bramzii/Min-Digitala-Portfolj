@@ -22,7 +22,23 @@
       </header>
       <section class="section">
         <div class="container grid two">
-          <form class="form card" id="contact-form">
+          <form
+            class="form card"
+            id="contact-form"
+            name="kontakt"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="kontakt" />
+            <p class="honeypot" aria-hidden="true">
+              <label
+                >Lämna detta fält tomt<input
+                  name="bot-field"
+                  tabindex="-1"
+                  autocomplete="off"
+              /></label>
+            </p>
             <div class="form-row">
               <label
                 >Namn<input
@@ -75,12 +91,13 @@
               </div>
             </div>
             <p>
-              Använd formuläret för att lämna ett meddelande. Direkta
-              kontaktuppgifter visas inte offentligt på webbplatsen.
+              <strong>E-post</strong><br /><a href="mailto:beddi@live.se"
+                >beddi@live.se</a
+              >
             </p>
             <div class="notice">
               <strong>Så fungerar formuläret</strong>
-              <p>
+              <p id="form-explanation">
                 Meddelandet sparas i json-server. Efteråt kan avsändaren hämta
                 och uppdatera sitt senast skickade meddelande. Därmed
                 demonstrerar sidan både att spara, hämta och uppdatera

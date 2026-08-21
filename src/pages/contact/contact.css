@@ -41,6 +41,11 @@
   color: #fff;
 }
 
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
 @media (max-width: 640px) {
   .contact-heading-row {
     align-items: flex-start;
