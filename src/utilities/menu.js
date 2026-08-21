@@ -6,6 +6,7 @@ const links = [
   ["/pages/experience/experience.html", "Erfarenhet"],
   ["/pages/education/education.html", "Utbildning"],
   ["/pages/contact/contact.html", "Kontakt"],
+  ["/pages/surprise/surprise.html", "?!"],
 ];
 
 export default class Menu {
