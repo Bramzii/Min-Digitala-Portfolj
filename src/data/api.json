@@ -122,6 +122,41 @@
       "id": 8,
       "name": "Ledarskap",
       "category": "Team och resultat"
+    },
+    {
+      "id": 9,
+      "name": "HTML",
+      "category": "Webbutveckling"
+    },
+    {
+      "id": 10,
+      "name": "CSS",
+      "category": "Webbutveckling"
+    },
+    {
+      "id": 11,
+      "name": "JavaScript",
+      "category": "Webbutveckling"
+    },
+    {
+      "id": 12,
+      "name": "Säker systemutveckling",
+      "category": "Pågående studier"
+    },
+    {
+      "id": 13,
+      "name": "Threat modeling & STRIDE",
+      "category": "Pågående studier"
+    },
+    {
+      "id": 14,
+      "name": "Webb- och API-säkerhet",
+      "category": "Pågående studier"
+    },
+    {
+      "id": 15,
+      "name": "Privacy by design",
+      "category": "Pågående studier"
     }
   ],
   "messages": []
