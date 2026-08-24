@@ -21,90 +21,35 @@
         </div>
       </header>
       <section class="section">
-        <div class="container grid two">
-          <form
-            class="form card"
-            id="contact-form"
-            name="kontakt"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="form-name" value="kontakt" />
-            <p class="honeypot" aria-hidden="true">
-              <label
-                >Lämna detta fält tomt<input
-                  name="bot-field"
-                  tabindex="-1"
-                  autocomplete="off"
-              /></label>
+        <div class="container">
+          <article class="card contact-card">
+            <p class="eyebrow">Välj kontaktväg</p>
+            <h2>Vi hörs!</h2>
+            <p class="lead">
+              Det enklaste sättet att nå mig är via e-post eller LinkedIn. Du
+              kan också besöka min GitHub för att se fler projekt och min kod.
             </p>
-            <div class="form-row">
-              <label
-                >Namn<input
-                  name="name"
-                  required
-                  minlength="2"
-                  autocomplete="name" /></label
-              ><label
-                >E-post<input
-                  type="email"
-                  name="email"
-                  required
-                  autocomplete="email"
-              /></label>
-            </div>
-            <label>Ämne<input name="subject" required minlength="3" /></label
-            ><label
-              >Meddelande<textarea
-                name="message"
-                required
-                minlength="10"
-              ></textarea>
-            </label>
-            <div class="actions">
-              <button class="button" id="submit-message" type="submit">
-                Skicka meddelande</button
-              ><button
+            <div class="actions contact-actions">
+              <a class="button" href="mailto:beddi@live.se">Skicka e-post</a>
+              <a
                 class="button secondary"
-                type="button"
-                id="edit-message"
-                hidden
+                href="https://www.linkedin.com/in/beddi-ramzi-6b9540244/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
               >
-                Redigera senast skickade
-              </button>
-            </div>
-            <p class="status" id="form-status" aria-live="polite"></p>
-          </form>
-          <aside>
-            <div class="contact-heading-row">
-              <h2>Kontaktuppgifter</h2>
-              <div class="linkedin-callout">
-                <span class="linkedin-arrow" aria-hidden="true">→</span>
-                <a
-                  class="button linkedin-button"
-                  href="https://www.linkedin.com/in/beddi-ramzi-6b9540244/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Besök min LinkedIn</a
-                >
-              </div>
-            </div>
-            <p>
-              <strong>E-post</strong><br /><a href="mailto:beddi@live.se"
-                >beddi@live.se</a
+              <a
+                class="button secondary"
+                href="https://github.com/Bramzii"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
               >
+            </div>
+            <p class="contact-email">
+              E-post: <a href="mailto:beddi@live.se">beddi@live.se</a>
             </p>
-            <div class="notice">
-              <strong>Så fungerar formuläret</strong>
-              <p id="form-explanation">
-                Meddelandet sparas i json-server. Efteråt kan avsändaren hämta
-                och uppdatera sitt senast skickade meddelande. Därmed
-                demonstrerar sidan både att spara, hämta och uppdatera
-                information.
-              </p>
-            </div>
-          </aside>
+          </article>
         </div>
       </section>
     </main>
