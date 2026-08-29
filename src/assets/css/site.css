@@ -213,6 +213,11 @@ h2 {
 .page-hero {
   padding: 4.5rem 0 2.5rem;
 }
+.page-hero .eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.16em;
+}
 .page-hero h1 {
   font-size: clamp(2.6rem, 7vw, 5rem);
 }
