@@ -493,7 +493,7 @@ select:focus {
 .reveal-item[data-reveal="heading"] {
   --reveal-y: 54px;
   --reveal-scale: 0.985;
-  clip-path: inset(0 0 92% 0 round 8px);
+  clip-path: inset(0 0 72% 0 round 8px);
   transform-origin: left bottom;
 }
 

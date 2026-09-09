@@ -34,7 +34,7 @@ export default class Animations {
     this.#intersectionObserver = new IntersectionObserver(
       (entries) => this.#revealVisibleElements(entries),
       {
-        threshold: 0.14,
+        threshold: 0.08,
         rootMargin: "0px 0px -7% 0px",
       },
     );
@@ -86,8 +86,20 @@ export default class Animations {
         "--reveal-delay",
         `${this.#getRevealDelay(element)}ms`,
       );
+
+      if (this.#isInitiallyVisibleHeroElement(element)) {
+        element.classList.add("is-visible");
+        return;
+      }
+
       this.#intersectionObserver.observe(element);
     });
+  }
+
+  #isInitiallyVisibleHeroElement(element) {
+    const isHeroElement = element.closest(".hero, .page-hero");
+    const rect = element.getBoundingClientRect();
+    return Boolean(isHeroElement && rect.top < innerHeight && rect.bottom > 0);
   }
 
   #getRevealStyle(element) {
