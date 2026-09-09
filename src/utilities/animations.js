@@ -80,18 +80,17 @@ export default class Animations {
       }
 
       this.#animatedElements.add(element);
+
+      if (this.#isInitiallyVisibleHeroElement(element)) {
+        return;
+      }
+
       element.classList.add("reveal-item");
       element.dataset.reveal = this.#getRevealStyle(element);
       element.style.setProperty(
         "--reveal-delay",
         `${this.#getRevealDelay(element)}ms`,
       );
-
-      if (this.#isInitiallyVisibleHeroElement(element)) {
-        element.classList.add("is-visible");
-        return;
-      }
-
       this.#intersectionObserver.observe(element);
     });
   }
